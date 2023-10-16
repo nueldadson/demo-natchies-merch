@@ -1,0 +1,17 @@
+.iconn{
+  display: none;
+  color: #fff;
+  z-index: 50000000;
+}
+@media screen and (max-width: 768px) {
+  .iconn{
+  display: block;
+  /* position: absolute; */
+  color: #946aef;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 15%);
+  font-size: 2rem;
+  cursor: pointer;
+}
+}
