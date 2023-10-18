@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedin, FaTimes, FaTwitter } from "react-icons/fa";
 
 export const SidebarContainer = styled.aside`
 	position: fixed;
-	z-index: 999999999999999999999999999999999;
+	z-index: 99999999999999999999;
 	width: 100%;
 	height: 100%;
 	background: #ff6600;
@@ -39,15 +39,13 @@ export const SidebarMenu = styled.ul`
 	z-index: 1000 !important;
 	display: grid;
 	margin-top: 100px;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(4, 80px);
-
+	padding-left: 10%;
 	@media screen and (max-width: 480px) {
 		grid-template-rows: repeat(4, 80px);
 	}
 `;
 
-export const SidebarLink = styled.span`
+export const SidebarLink = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: left;
@@ -76,6 +74,7 @@ export const SidebarLink = styled.span`
 
 export const SidebarIcon = styled.div`
 	display: flex;
+	/* flex-direction: row; */
 	align-items: center;
 	justify-content: center;
 	font-size: 2.4rem;

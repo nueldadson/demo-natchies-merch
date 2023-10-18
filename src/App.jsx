@@ -12,6 +12,7 @@ import {
 	SuperQuality,
 } from "./sections";
 import { Fade, Slide, Reveal, Bounce } from "react-awesome-reveal";
+import "./app.css";
 
 const App = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +23,8 @@ const App = () => {
 
 	return (
 		<main className="relative">
-			<Sidebar isOpen={isOpen} toggle={toggle} />
 			<Nav isOpen={isOpen} toggle={toggle} />
+			<Sidebar isOpen={isOpen} toggle={toggle} />
 			<Fade direction="in" duration={2000}>
 				<section className="xl:padding-l wide:padding-r padding-b">
 					<Hero />

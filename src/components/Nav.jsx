@@ -37,9 +37,7 @@ const Nav = ({ isOpen, toggle }) => {
 					<img
 						src={headerLogo}
 						alt="logo"
-						width={129}
-						height={29}
-						className="m-0 w-[300px] h-[60px]"
+						className="mt-1 w-[250px] h-[50px]"
 					/>
 				</a>
 				<ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">

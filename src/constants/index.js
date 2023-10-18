@@ -53,22 +53,50 @@ export const products = [
 	{
 		imgURL: shoe4,
 		name: "Naked Wolfe Kosa Blue",
-		price: "#42000",
+		oldprice: 50000,
+		price: 42000,
 	},
 	{
 		imgURL: shoe5,
 		name: "Nike Air Force-1",
-		price: "#30000",
+		oldprice: 50000,
+		price: 20000,
 	},
 	{
 		imgURL: shoe6,
 		name: "Nike Dunk Low",
-		price: "#22000",
+		oldprice: 50000,
+		price: 22000,
 	},
 	{
 		imgURL: shoe7,
 		name: "Nike Air Jordan-1 Mid SE",
-		price: "#45000",
+		oldprice: 50000,
+		price: 45000,
+	},
+	{
+		imgURL: shoe7,
+		name: "Nike Air Jordan-1 Mid SE",
+		oldprice: 50000,
+		price: 45000,
+	},
+	{
+		imgURL: shoe7,
+		name: "Nike Air Jordan-1 Mid SE",
+		oldprice: 50000,
+		price: 45000,
+	},
+	{
+		imgURL: shoe7,
+		name: "Nike Air Jordan-1 Mid SE",
+		oldprice: 50000,
+		price: 45000,
+	},
+	{
+		imgURL: shoe7,
+		name: "Nike Air Jordan-1 Mid SE",
+		oldprice: 50000,
+		price: 45000,
 	},
 ];
 

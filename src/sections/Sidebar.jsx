@@ -1,3 +1,4 @@
+import { headerLogo } from "../assets/images";
 import {
 	SidebarContainer,
 	Icon,
@@ -14,31 +15,55 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const Sidebar = ({ isOpen, toggle }) => {
 	return (
-		<SidebarContainer isOpen={isOpen} onClick={toggle}>
-			<Icon onClick={toggle}>
-				<CloseIcon />
-			</Icon>
-			<SidebarContent>
-				<SidebarMenu>
-					{/* <Link smooth to="/"> */}
-					<SidebarLink onClick={toggle}>About Us</SidebarLink>
-					{/* </Link> */}
-					{/* <Link smooth to="/"> */}
-					<SidebarLink onClick={toggle}>Contact Us</SidebarLink>
-					{/* </Link> */}
-					{/* <Link smooth to="/"> */}
-					<SidebarLink onClick={toggle}>FAQs</SidebarLink>
-					{/* </Link> */}
-				</SidebarMenu>
-				<SidebarIcon>
-					<div>
+		<>
+			<SidebarContainer isOpen={isOpen} onClick={toggle}>
+				<img
+					src={headerLogo}
+					alt="logo"
+					className="mt-1 w-[250px] h-[50px] mt-8 ml-8 absolute"
+				/>
+				<Icon onClick={toggle} className="mr-8 mt-6">
+					<CloseIcon />
+				</Icon>
+				<SidebarContent>
+					<SidebarMenu>
+						{/* <Link smooth to="/"> */}
+						<SidebarLink onClick={toggle} href="#about-us">
+							About Us
+						</SidebarLink>
+						{/* </Link> */}
+						{/* <Link smooth to="/"> */}
+						<SidebarLink onClick={toggle} href="#products">
+							Product
+						</SidebarLink>
+						<SidebarLink onClick={toggle} href="#contact-us">
+							Contact
+						</SidebarLink>
+						{/* </Link> */}
+						{/* <Link smooth to="/"> */}
+						<SidebarLink
+							onClick={toggle}
+							href="https://aquamarine-chaja-0119a9.netlify.app/"
+						>
+							Sign In
+						</SidebarLink>
+						<SidebarLink
+							onClick={toggle}
+							href="https://aquamarine-chaja-0119a9.netlify.app/"
+							className="pb-8"
+						>
+							Explore Now
+						</SidebarLink>
+						{/* </Link> */}
+					</SidebarMenu>
+					<SidebarIcon>
 						<LinkedinIcon />
 						<InstagramIcon />
 						<TwitterIcon />
-					</div>
-				</SidebarIcon>
-			</SidebarContent>
-		</SidebarContainer>
+					</SidebarIcon>
+				</SidebarContent>
+			</SidebarContainer>
+		</>
 	);
 };
 
