@@ -14,8 +14,8 @@ const Hero = () => {
 			className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
 		>
 			<div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
-				<p className="text-xl font-montserrat text-coral-red">
-					Our collectionss
+				<p className="text-xl font-montserrat pt-2 text-coral-red">
+					Our collections
 				</p>
 
 				<h1 className="mt-10 font-palanquin text-4xl max-sm:text-[64px] max-sm:leading-[82px] font-bold">

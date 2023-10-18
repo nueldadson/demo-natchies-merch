@@ -1,14 +1,37 @@
-// import { hamburger } from "../assets/icons";
+import React from "react";
 import { headerLogo } from "../assets/images";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { navLinks } from "../constants";
-import './navs.css'; ''
+import "./navs.css";
 
-const Nav = ({isOpen, toggle}) => {
+const Nav = ({ isOpen, toggle }) => {
+	const [isFixed, setIsFixed] = useState(false);
+
+	const scrollThreshold = 100; // Adjust this value based on when you want the navbar to become fixed
+
+	const handleScroll = () => {
+		if (window.scrollY > scrollThreshold) {
+			setIsFixed(true);
+		} else {
+			setIsFixed(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
-		<header className="padding-x py-8 absolute z-10 w-full">
+		<header
+			className={`padding-x py-4 z-10 w-full ${
+				isFixed ? "fixed top-0 bg-white shadow-md" : " absolute"
+			}`}
+		>
 			<nav className="flex justify-between items-center max-container">
 				<a href="/">
 					<img
@@ -31,15 +54,23 @@ const Nav = ({isOpen, toggle}) => {
 						</li>
 					))}
 				</ul>
-				<div className="flex text-white font-bold gap-2 text-lg leading-normal  font-montserrat max-lg:hidden wide:mr-24">
+				<div
+					className={`flex  font-bold gap-2 text-lg leading-normal font-montserrat max-lg:hidden wide:mr-24 ${
+						isFixed ? " text-coral-red " : "text-white"
+					}`}
+				>
 					<a href="https://aquamarine-chaja-0119a9.netlify.app/">Sign in</a>
 					<span>/</span>
 					<a href="https://aquamarine-chaja-0119a9.netlify.app/">Explore now</a>
 				</div>
-				<div className="hidden max-lg:block">
+				<div className="">
 					{/* <img src={hamburger} alt="hamburger icon" width={25} height={25} /> */}
-					          <FontAwesomeIcon icon={isOpen ? faTimes : faUsers} class="iconn"  onClick={toggle}/>
-
+					{/* dcrfrfrubububububbub */}
+					<FontAwesomeIcon
+						icon={isOpen ? faTimes : faBars}
+						className="iconn"
+						onClick={toggle}
+					/>
 				</div>
 			</nav>
 		</header>

@@ -1,6 +1,7 @@
 import { Nav } from "./components";
-import Sidebar from "./components/Sidebar/Sidebar";
+import { useState } from "react";
 import {
+	Sidebar,
 	CustomerReviews,
 	Footer,
 	Hero,
@@ -10,7 +11,6 @@ import {
 	Subscribe,
 	SuperQuality,
 } from "./sections";
-
 import { Fade, Slide, Reveal, Bounce } from "react-awesome-reveal";
 
 const App = () => {
@@ -22,8 +22,8 @@ const App = () => {
 
 	return (
 		<main className="relative">
-			<Nav isOpen={isOpen} toggle={toggle} />
 			<Sidebar isOpen={isOpen} toggle={toggle} />
+			<Nav isOpen={isOpen} toggle={toggle} />
 			<Fade direction="in" duration={2000}>
 				<section className="xl:padding-l wide:padding-r padding-b">
 					<Hero />
